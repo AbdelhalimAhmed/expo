@@ -140,6 +140,7 @@ public class AdMobBannerView extends FrameLayout {
       if (testDeviceID != null) {
         adRequestBuilder = adRequestBuilder.addTestDevice(testDeviceID);
       }
+      adRequestBuilder.tagForChildDirectedTreatment(true);
       AdRequest adRequest = adRequestBuilder.build();
       adView.loadAd(adRequest);
     }
