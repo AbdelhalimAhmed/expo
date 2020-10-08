@@ -151,7 +151,7 @@ public class AdMobRewardedVideoAdModule extends ExportedModule implements Reward
           if (testDeviceID != null) {
             adRequestBuilder = adRequestBuilder.addTestDevice(testDeviceID);
           }
-
+          adRequestBuilder.tagForChildDirectedTreatment(true);
           AdRequest adRequest = adRequestBuilder.build();
           mRewardedVideoAd.loadAd(mAdUnitID, adRequest);
         }
