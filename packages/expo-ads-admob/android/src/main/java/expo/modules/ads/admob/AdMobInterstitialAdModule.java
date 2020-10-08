@@ -87,6 +87,7 @@ public class AdMobInterstitialAdModule extends ExportedModule {
           if (testDeviceID != null) {
             adRequestBuilder = adRequestBuilder.addTestDevice(testDeviceID);
           }
+          adRequestBuilder.tagForChildDirectedTreatment(true);
           AdRequest adRequest = adRequestBuilder.build();
           mInterstitialAd.loadAd(adRequest);
         }
