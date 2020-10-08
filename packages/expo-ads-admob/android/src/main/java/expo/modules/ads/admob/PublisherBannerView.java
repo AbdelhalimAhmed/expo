@@ -137,6 +137,7 @@ public class PublisherBannerView extends FrameLayout implements AppEventListener
       if (testDeviceID != null) {
         adRequestBuilder = adRequestBuilder.addTestDevice(testDeviceID);
       }
+      adRequestBuilder.tagForChildDirectedTreatment(true);
       PublisherAdRequest adRequest = adRequestBuilder.build();
       adView.loadAd(adRequest);
     }
